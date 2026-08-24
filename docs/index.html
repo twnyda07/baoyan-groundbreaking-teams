@@ -193,7 +193,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.
   <input id="q" type="search" placeholder="搜尋姓名、組別或職務　例：釋見輝、動土執行組、鏟具">
   <button id="bshort" aria-pressed="false">只看有缺額</button>
   <button id="bopen" aria-pressed="false">全部展開</button>
-  <button onclick="print()">列印</button>
+  <button onclick="doPrint()">列印</button>
   <a class="navlink" href="decisions.html">待寺方裁決</a>
   <span id="hit"></span>
 </div></div>
@@ -572,6 +572,16 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.
 </div></footer>
 
 <script>
+function doPrint(){
+  // 有些環境（手機 App 內建瀏覽器、預覽面板）會把 print() 靜默吃掉。
+  // beforeprint 沒觸發＝視窗沒彈出來，就改給指引。
+  var fired=false;
+  window.addEventListener('beforeprint',function(){fired=true;},{once:true});
+  try{window.print();}catch(e){}
+  setTimeout(function(){
+    if(!fired) alert('這個視窗不支援直接列印。\n請改用瀏覽器選單裡的「列印」，或把本頁網址用 Chrome／Safari 開啟後再按列印（電腦快速鍵 Cmd+P）。');
+  },600);
+}
 (function(){
   var q=document.getElementById('q'), hit=document.getElementById('hit'),
       cards=[].slice.call(document.querySelectorAll('.card')),
