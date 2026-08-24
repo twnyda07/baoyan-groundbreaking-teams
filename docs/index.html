@@ -10,8 +10,8 @@
 :root{
   /* 白底護目：米白底（不用純白，降眩光）＋墨綠文字，綠色只做點綴 */
   --deep:#F7F9F5; --blue:#EDF3EE; --mid:#E2EDE5; --light:#D2E4D8;
-  --sky:#51705E; --gold:#2E7D4F; --goldb:#1F6B40;
-  --ivory:#22382B; --white:#122619;
+  --sky:#3A5646; --gold:#25663F; --goldb:#1A5A36;
+  --ivory:#1B2A20; --white:#0E1D13;
   --ok:#2E8B57; --midc:#C9A227; --none:#C0654E;
 }
 /* 大字：整頁基準字級放大，所有 rem 尺寸跟著長大 */
@@ -19,7 +19,7 @@ html{font-size:19px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;background:var(--deep);
-  color:var(--ivory);line-height:1.9;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+  color:var(--ivory);line-height:1.9;letter-spacing:.02em;font-weight:500;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 a{color:var(--goldb);text-decoration:none}
 a:hover{color:#123A24}
@@ -44,12 +44,15 @@ h1{font-size:1.75rem;color:var(--white);letter-spacing:.1em;font-weight:700}
 .tools .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 #q{flex:1;min-width:210px;background:rgba(46,125,79,.08);border:1px solid rgba(46,125,79,.3);
   color:var(--ivory);padding:9px 14px;border-radius:8px;font:inherit;font-size:.95rem}
-#q::placeholder{color:rgba(56,84,66,.55)}
+#q::placeholder{color:rgba(46,68,55,.7)}
 #q:focus{outline:2px solid var(--gold);outline-offset:1px}
 .tools button{background:rgba(46,125,79,.14);border:1px solid rgba(46,125,79,.4);
   color:var(--goldb);padding:8px 15px;border-radius:8px;font:inherit;font-size:.9rem;cursor:pointer}
 .tools button:hover,.tools button[aria-pressed="true"]{background:var(--gold);color:#FFFFFF}
 #hit{color:var(--sky);font-size:.88rem}
+.navlink{display:inline-block;background:rgba(201,162,39,.14);border:1px solid rgba(201,162,39,.5);
+  color:#7A6212;padding:8px 15px;border-radius:8px;font-size:.9rem;text-decoration:none}
+.navlink:hover{background:#C9A227;color:#fff}
 
 /* 組織圖 */
 .org{margin:30px 0 8px;text-align:center}
@@ -86,7 +89,7 @@ h1{font-size:1.75rem;color:var(--white);letter-spacing:.1em;font-weight:700}
 .prog{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .prog .track{flex:1;max-width:340px}
 .pn{color:var(--goldb);font-size:.95rem;white-space:nowrap}
-.of{color:rgba(56,84,66,.6);font-size:.82em}
+.of{color:rgba(46,68,55,.8);font-size:.82em}
 
 table.roles{width:100%;border-collapse:collapse;font-size:1.02rem}
 table.roles th{text-align:left;color:var(--gold);font-size:.9rem;font-weight:400;
@@ -94,17 +97,17 @@ table.roles th{text-align:left;color:var(--gold);font-size:.9rem;font-weight:400
 table.roles td{padding:9px;border-bottom:1px solid rgba(46,125,79,.12);vertical-align:top}
 tr.none td{background:rgba(192,101,78,.08)} tr.ok td{background:rgba(46,139,87,.08)}
 .rt{width:31%} .rt b{color:var(--white);font-weight:600}
-.duty{color:rgba(56,84,66,.95);font-size:.9rem;line-height:1.7;margin-top:3px}
+.duty{color:#2E4437;font-size:.95rem;line-height:1.7;margin-top:3px}
 td.num{width:13%;white-space:nowrap;color:var(--goldb)}
 .short{display:inline-block;background:rgba(192,101,78,.16);color:#8A3B22;border-radius:4px;
   padding:1px 8px;font-size:.85rem;margin-left:6px}
 .over{display:inline-block;background:rgba(201,162,39,.18);color:#7A6212;border-radius:4px;
   padding:1px 8px;font-size:.85rem;margin-left:6px}
 .who{line-height:1.9}
-.blank{color:rgba(56,84,66,.45)}
+.blank{color:rgba(46,68,55,.65)}
 .idb{display:inline-block;background:rgba(46,125,79,.12);border-radius:4px;padding:1px 8px;
   font-size:.86rem;color:var(--sky);margin-left:6px}
-.note{display:block;color:rgba(56,84,66,.85);font-size:.88rem}
+.note{display:block;color:#33493C;font-size:.88rem}
 .volbox{margin-top:12px;padding:10px 13px;background:rgba(46,125,79,.09);
   border-left:3px solid var(--gold);border-radius:0 7px 7px 0;font-size:.9rem}
 .volbox b{display:block;color:var(--goldb);font-size:.9rem;letter-spacing:.06em;margin-bottom:3px}
@@ -115,7 +118,7 @@ details{flex:1 1 260px;background:rgba(46,125,79,.05);border:1px solid rgba(46,1
 details[open]{flex-basis:100%}
 summary{cursor:pointer;color:var(--goldb);font-size:.98rem;letter-spacing:.05em}
 details ul{margin:10px 0 4px 18px;font-size:.98rem;line-height:1.85}
-details li{margin-bottom:5px;color:rgba(34,56,43,.92)}
+details li{margin-bottom:5px;color:#1F3327}
 .tm{display:inline-block;min-width:124px;color:var(--gold);font-size:.92rem}
 
 /* 主辦交代原文（全文對照與各組內嵌） */
@@ -128,7 +131,7 @@ blockquote{margin:8px 0;padding:10px 16px;border-left:3px solid var(--gold);
 .rqh{color:var(--goldb);font-size:1.05rem;letter-spacing:.04em;margin-bottom:4px}
 .rqh b{display:inline-block;background:rgba(46,125,79,.18);border-radius:6px;
   padding:1px 10px;margin-right:9px;font-weight:600}
-.rq ul,.ri ul{margin:7px 0 4px 20px;font-size:.95rem;line-height:1.8;color:rgba(34,56,43,.9)}
+.rq ul,.ri ul{margin:7px 0 4px 20px;font-size:.95rem;line-height:1.8;color:#1F3327}
 .rq li,.ri li{margin-bottom:3px}
 .own{margin-top:9px;font-size:.92rem}
 .own span{color:var(--sky);margin-right:8px;font-size:.88rem}
@@ -146,10 +149,10 @@ details.reqd>summary{color:var(--goldb);font-size:1.02rem}
 .pending .pl{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .pending .pl li{background:#FFFFFF;border:1px solid rgba(46,125,79,.14);
   border-radius:7px;padding:6px 11px;font-size:.9rem}
-.pending .pl span{display:block;color:rgba(56,84,66,.8);font-size:.86rem}
+.pending .pl span{display:block;color:#33493C;font-size:.86rem}
 
 footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.22);
-  color:rgba(56,84,66,.9);font-size:.94rem;line-height:1.85}
+  color:#2E4437;font-size:.94rem;line-height:1.85}
 .hide{display:none !important}
 
 @media(max-width:900px){.ocols{grid-template-columns:repeat(2,1fr)}.reqall .rqs{grid-template-columns:1fr}}
@@ -191,6 +194,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.
   <button id="bshort" aria-pressed="false">只看有缺額</button>
   <button id="bopen" aria-pressed="false">全部展開</button>
   <button onclick="print()">列印</button>
+  <a class="navlink" href="decisions.html">待寺方裁決</a>
   <span id="hit"></span>
 </div></div>
 
