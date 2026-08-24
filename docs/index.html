@@ -8,11 +8,11 @@
 <meta name="robots" content="noindex">
 <style>
 :root{
-  /* 綠色護目配色：深墨綠底＋低彩度綠字，降低藍光與對比眩光 */
-  --deep:#0C1A12; --blue:#12291C; --mid:#1B3F2B; --light:#2A5C3E;
-  --sky:#A9CBB3; --gold:#8FD6A6; --goldb:#B6E8C4;
-  --ivory:#E4EFE4; --white:#F2F8F1;
-  --ok:#5FBF87; --midc:#C6C27A; --none:#C08A6E;
+  /* 白底護目：米白底（不用純白，降眩光）＋墨綠文字，綠色只做點綴 */
+  --deep:#F7F9F5; --blue:#EDF3EE; --mid:#E2EDE5; --light:#D2E4D8;
+  --sky:#51705E; --gold:#2E7D4F; --goldb:#1F6B40;
+  --ivory:#22382B; --white:#122619;
+  --ok:#2E8B57; --midc:#C9A227; --none:#C0654E;
 }
 /* 大字：整頁基準字級放大，所有 rem 尺寸跟著長大 */
 html{font-size:19px}
@@ -22,11 +22,11 @@ body{font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;background:var(--d
   color:var(--ivory);line-height:1.9;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 a{color:var(--goldb);text-decoration:none}
-a:hover{color:#fff}
+a:hover{color:#123A24}
 
 /* 頁首 */
-header.top{padding:40px 0 26px;border-bottom:1px solid rgba(143,214,166,.22);
-  background:radial-gradient(ellipse 80% 60% at 50% -20%,rgba(42,92,62,.22),transparent 65%)}
+header.top{padding:40px 0 26px;border-bottom:1px solid rgba(46,125,79,.22);
+  background:radial-gradient(ellipse 80% 60% at 50% -20%,rgba(46,125,79,.08),transparent 65%)}
 .motto{color:var(--gold);letter-spacing:.42em;font-size:1.05rem;margin-bottom:14px}
 h1{font-size:1.75rem;color:var(--white);letter-spacing:.1em;font-weight:700}
 .sub{color:var(--sky);font-size:1.05rem;margin-top:8px}
@@ -34,21 +34,21 @@ h1{font-size:1.75rem;color:var(--white);letter-spacing:.1em;font-weight:700}
 .stat b{font-size:1.85rem;color:var(--goldb);font-weight:700}
 .stat span{color:var(--sky);font-size:.95rem;margin-left:5px}
 .tbar{margin-top:16px;max-width:520px}
-.track{height:9px;background:rgba(169,203,179,.16);border-radius:99px;overflow:hidden}
+.track{height:9px;background:rgba(46,125,79,.14);border-radius:99px;overflow:hidden}
 .track i{display:block;height:100%;border-radius:99px;background:var(--midc)}
 .track i.ok{background:var(--ok)} .track i.none{background:var(--none)}
 
 /* 工具列 */
-.tools{position:sticky;top:0;z-index:40;background:rgba(12,26,18,.94);
-  backdrop-filter:blur(12px);border-bottom:1px solid rgba(143,214,166,.2);padding:11px 0}
+.tools{position:sticky;top:0;z-index:40;background:rgba(247,249,245,.95);
+  backdrop-filter:blur(12px);border-bottom:1px solid rgba(46,125,79,.2);padding:11px 0}
 .tools .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-#q{flex:1;min-width:210px;background:rgba(169,203,179,.1);border:1px solid rgba(143,214,166,.3);
+#q{flex:1;min-width:210px;background:rgba(46,125,79,.08);border:1px solid rgba(46,125,79,.3);
   color:var(--ivory);padding:9px 14px;border-radius:8px;font:inherit;font-size:.95rem}
-#q::placeholder{color:rgba(169,203,179,.55)}
+#q::placeholder{color:rgba(56,84,66,.55)}
 #q:focus{outline:2px solid var(--gold);outline-offset:1px}
-.tools button{background:rgba(143,214,166,.14);border:1px solid rgba(143,214,166,.4);
+.tools button{background:rgba(46,125,79,.14);border:1px solid rgba(46,125,79,.4);
   color:var(--goldb);padding:8px 15px;border-radius:8px;font:inherit;font-size:.9rem;cursor:pointer}
-.tools button:hover,.tools button[aria-pressed="true"]{background:var(--gold);color:#0C1A12}
+.tools button:hover,.tools button[aria-pressed="true"]{background:var(--gold);color:#FFFFFF}
 #hit{color:var(--sky);font-size:.88rem}
 
 /* 組織圖 */
@@ -57,83 +57,108 @@ h1{font-size:1.75rem;color:var(--white);letter-spacing:.1em;font-weight:700}
   border:1px solid var(--gold);border-radius:11px;padding:13px 30px;color:var(--white);
   font-size:1.1rem;letter-spacing:.1em}
 .ohq span,.ob span{display:block;font-size:.8rem;color:var(--sky);letter-spacing:.04em;margin-top:2px}
-.ostem{width:2px;height:22px;background:rgba(143,214,166,.45);margin:0 auto}
+.ostem{width:2px;height:22px;background:rgba(46,125,79,.45);margin:0 auto}
 .ocols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:left;
-  border-top:2px solid rgba(143,214,166,.45);padding-top:0}
+  border-top:2px solid rgba(46,125,79,.45);padding-top:0}
 .ocol{padding-top:20px;position:relative}
 .ocol::before{content:"";position:absolute;top:0;left:50%;width:2px;height:20px;
-  background:rgba(143,214,166,.45)}
-.odept{background:rgba(42,92,62,.24);border:1px solid rgba(143,214,166,.35);border-radius:9px;
+  background:rgba(46,125,79,.45)}
+.odept{background:rgba(46,125,79,.1);border:1px solid rgba(46,125,79,.35);border-radius:9px;
   padding:9px 12px;color:var(--goldb);font-size:1rem;letter-spacing:.08em;margin-bottom:10px}
 .odept em{display:block;font-style:normal;color:var(--sky);font-size:.86rem;letter-spacing:0;
   line-height:1.6;margin-top:4px}
-.ob{display:block;background:rgba(18,41,28,.6);border:1px solid rgba(169,203,179,.2);
+.ob{display:block;background:#FFFFFF;border:1px solid rgba(46,125,79,.3);
   border-left:3px solid var(--midc);border-radius:7px;padding:8px 11px;margin-bottom:7px;
   color:var(--ivory);font-size:.94rem}
 .ob.ok{border-left-color:var(--ok)} .ob.none{border-left-color:var(--none)}
-.ob:hover{background:rgba(42,92,62,.4);color:#fff}
+.ob:hover{background:rgba(46,125,79,.12);color:#122619}
 
 /* 部標題與卡片 */
-.dh{margin:44px 0 16px;padding-bottom:9px;border-bottom:1px solid rgba(143,214,166,.25);
+.dh{margin:44px 0 16px;padding-bottom:9px;border-bottom:1px solid rgba(46,125,79,.25);
   color:var(--gold);font-size:1.3rem;letter-spacing:.14em}
 .dh span{display:block;color:var(--sky);font-size:.95rem;letter-spacing:0;margin-top:5px;font-weight:400}
-.card{background:rgba(18,41,28,.34);border:1px solid rgba(169,203,179,.15);border-radius:13px;
+.card{background:#FFFFFF;border:1px solid rgba(46,125,79,.25);box-shadow:0 1px 6px rgba(18,38,25,.06);border-radius:13px;
   padding:20px 22px;margin-bottom:18px}
 .ch h3{font-size:1.16rem;color:var(--white);letter-spacing:.07em}
 .pts{font-size:.84rem;color:var(--sky);font-weight:400;letter-spacing:0;margin-left:10px}
-.pt{display:inline-block;background:rgba(143,214,166,.18);border-radius:4px;padding:0 5px;margin-left:3px}
+.pt{display:inline-block;background:rgba(46,125,79,.18);border-radius:4px;padding:0 5px;margin-left:3px}
 .mission{color:var(--sky);font-size:1rem;margin:7px 0 12px;line-height:1.7}
 .prog{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .prog .track{flex:1;max-width:340px}
 .pn{color:var(--goldb);font-size:.95rem;white-space:nowrap}
-.of{color:rgba(169,203,179,.6);font-size:.82em}
+.of{color:rgba(56,84,66,.6);font-size:.82em}
 
 table.roles{width:100%;border-collapse:collapse;font-size:1.02rem}
 table.roles th{text-align:left;color:var(--gold);font-size:.9rem;font-weight:400;
-  letter-spacing:.1em;padding:6px 9px;border-bottom:1px solid rgba(143,214,166,.28)}
-table.roles td{padding:9px;border-bottom:1px solid rgba(169,203,179,.09);vertical-align:top}
-tr.none td{background:rgba(192,138,110,.09)} tr.ok td{background:rgba(95,191,135,.07)}
+  letter-spacing:.1em;padding:6px 9px;border-bottom:1px solid rgba(46,125,79,.28)}
+table.roles td{padding:9px;border-bottom:1px solid rgba(46,125,79,.12);vertical-align:top}
+tr.none td{background:rgba(192,101,78,.08)} tr.ok td{background:rgba(46,139,87,.08)}
 .rt{width:31%} .rt b{color:var(--white);font-weight:600}
-.duty{color:rgba(169,203,179,.86);font-size:.9rem;line-height:1.7;margin-top:3px}
+.duty{color:rgba(56,84,66,.95);font-size:.9rem;line-height:1.7;margin-top:3px}
 td.num{width:13%;white-space:nowrap;color:var(--goldb)}
-.short{display:inline-block;background:rgba(192,138,110,.3);color:#F3D8C8;border-radius:4px;
+.short{display:inline-block;background:rgba(192,101,78,.16);color:#8A3B22;border-radius:4px;
   padding:1px 8px;font-size:.85rem;margin-left:6px}
-.over{display:inline-block;background:rgba(198,194,122,.28);color:#E4E2B0;border-radius:4px;
+.over{display:inline-block;background:rgba(201,162,39,.18);color:#7A6212;border-radius:4px;
   padding:1px 8px;font-size:.85rem;margin-left:6px}
 .who{line-height:1.9}
-.blank{color:rgba(169,203,179,.4)}
-.idb{display:inline-block;background:rgba(42,92,62,.55);border-radius:4px;padding:1px 8px;
+.blank{color:rgba(56,84,66,.45)}
+.idb{display:inline-block;background:rgba(46,125,79,.12);border-radius:4px;padding:1px 8px;
   font-size:.86rem;color:var(--sky);margin-left:6px}
-.note{display:block;color:rgba(169,203,179,.75);font-size:.88rem}
-.volbox{margin-top:12px;padding:10px 13px;background:rgba(143,214,166,.09);
+.note{display:block;color:rgba(56,84,66,.85);font-size:.88rem}
+.volbox{margin-top:12px;padding:10px 13px;background:rgba(46,125,79,.09);
   border-left:3px solid var(--gold);border-radius:0 7px 7px 0;font-size:.9rem}
 .volbox b{display:block;color:var(--goldb);font-size:.9rem;letter-spacing:.06em;margin-bottom:3px}
 
 .acc{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-details{flex:1 1 260px;background:rgba(12,26,18,.55);border:1px solid rgba(169,203,179,.13);
+details{flex:1 1 260px;background:rgba(46,125,79,.05);border:1px solid rgba(46,125,79,.18);
   border-radius:9px;padding:9px 13px}
 details[open]{flex-basis:100%}
 summary{cursor:pointer;color:var(--goldb);font-size:.98rem;letter-spacing:.05em}
 details ul{margin:10px 0 4px 18px;font-size:.98rem;line-height:1.85}
-details li{margin-bottom:5px;color:rgba(237,232,220,.9)}
+details li{margin-bottom:5px;color:rgba(34,56,43,.92)}
 .tm{display:inline-block;min-width:124px;color:var(--gold);font-size:.92rem}
 
-.pending .pl{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.pending .pl li{background:rgba(12,26,18,.6);border:1px solid rgba(169,203,179,.16);
-  border-radius:7px;padding:6px 11px;font-size:.9rem}
-.pending .pl span{display:block;color:rgba(169,203,179,.72);font-size:.86rem}
+/* 主辦交代原文（全文對照與各組內嵌） */
+blockquote{margin:8px 0;padding:10px 16px;border-left:3px solid var(--gold);
+  background:rgba(46,125,79,.07);border-radius:0 8px 8px 0;color:var(--white);
+  font-size:1.02rem;line-height:1.9}
+.reqall .rqs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rq{background:rgba(46,125,79,.05);border:1px solid rgba(46,125,79,.2);
+  border-radius:10px;padding:14px 16px}
+.rqh{color:var(--goldb);font-size:1.05rem;letter-spacing:.04em;margin-bottom:4px}
+.rqh b{display:inline-block;background:rgba(46,125,79,.18);border-radius:6px;
+  padding:1px 10px;margin-right:9px;font-weight:600}
+.rq ul,.ri ul{margin:7px 0 4px 20px;font-size:.95rem;line-height:1.8;color:rgba(34,56,43,.9)}
+.rq li,.ri li{margin-bottom:3px}
+.own{margin-top:9px;font-size:.92rem}
+.own span{color:var(--sky);margin-right:8px;font-size:.88rem}
+.oc{display:inline-block;background:rgba(46,125,79,.1);border:1px solid rgba(46,125,79,.3);
+  border-radius:999px;padding:2px 13px;margin:2px 5px 2px 0;font-size:.9rem}
+.oc:hover{background:var(--gold);color:#FFFFFF}
+.noown{color:#8A3B22}
+details.reqd{flex-basis:100%;margin-top:13px;background:rgba(46,125,79,.06);
+  border:1px solid rgba(46,125,79,.22)}
+details.reqd>summary{color:var(--goldb);font-size:1.02rem}
+.ri{margin:12px 0;padding-bottom:10px;border-bottom:1px dashed rgba(46,125,79,.25)}
+.ri:last-child{border-bottom:0;padding-bottom:2px}
+.rn{color:var(--goldb);font-size:1rem;margin-bottom:2px}
 
-footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166,.22);
-  color:rgba(169,203,179,.8);font-size:.94rem;line-height:1.85}
+.pending .pl{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.pending .pl li{background:#FFFFFF;border:1px solid rgba(46,125,79,.14);
+  border-radius:7px;padding:6px 11px;font-size:.9rem}
+.pending .pl span{display:block;color:rgba(56,84,66,.8);font-size:.86rem}
+
+footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.22);
+  color:rgba(56,84,66,.9);font-size:.94rem;line-height:1.85}
 .hide{display:none !important}
 
-@media(max-width:900px){.ocols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.ocols{grid-template-columns:repeat(2,1fr)}.reqall .rqs{grid-template-columns:1fr}}
 @media(max-width:620px){
   .ocols{grid-template-columns:1fr}
   h1{font-size:1.35rem} .motto{letter-spacing:.24em;font-size:.92rem}
   table.roles{font-size:.88rem} .rt{width:auto}
   table.roles thead{display:none}
-  table.roles tr{display:block;border-bottom:1px solid rgba(169,203,179,.14);padding:7px 0}
+  table.roles tr{display:block;border-bottom:1px solid rgba(46,125,79,.2);padding:7px 0}
   table.roles td{display:block;border:0;padding:2px 4px}
   td.num::before{content:"人數　";color:var(--gold);font-size:.8rem}
   td.who::before{content:"人員　";color:var(--gold);font-size:.8rem}
@@ -175,7 +200,8 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
   <div class="ostem"></div>
   <div class="ocols"><div class="ocol"><div class="odept">儀典部<em>大典儀程本身：從楞嚴神鼓開場到動土圓滿繞圈持咒，時間軸的主人。</em></div><a class="ob mid" href="#g-ceremony-liturgy">典禮儀軌組<span>4/60</span></a><a class="ob none" href="#g-groundbreaking-ops">動土執行組<span>0/198</span></a></div><div class="ocol"><div class="odept">知客部<em>人的移動：火車、接駁、入住、報到、餐食，把兩千五百人準時送到該在的位置。</em></div><a class="ob none" href="#g-transport">交通組<span>0/90</span></a><a class="ob none" href="#g-lodging-catering">住宿餐飲組<span>0/93</span></a><a class="ob none" href="#g-reception-checkin">報到接待組<span>0/81</span></a><a class="ob none" href="#g-medical">醫護救護組<span>0/29</span></a></div><div class="ocol"><div class="odept">護持部<em>功德與結緣：福田接單、結緣品發放、一筒金裝金，全部與身份別名單綁定。</em></div><a class="ob none" href="#g-futian-service-desk">福田服務台組<span>0/23</span></a><a class="ob none" href="#g-gift-distribution">結緣品組<span>0/41</span></a><a class="ob none" href="#g-yitongjin-station">一筒金組<span>0/45</span></a></div><div class="ocol"><div class="odept">後勤部<em>看不見但撐住全場：場地水電廁所環保、文宣紀念、名單與分派系統。</em></div><a class="ob none" href="#g-site-works">場地工務組<span>0/52</span></a><a class="ob none" href="#g-publicity-memorial">文宣紀念組<span>0/17</span></a><a class="ob none" href="#g-roster-info">名單資訊組<span>0/18</span></a></div></div>
 </div>
-  <section class="card" id="g-hq" data-group="大典統籌部">
+  <section class="card reqall" id="req"><header class="ch"><h3>主辦交代的 23 項工作內容<span class="pts">原文與負責組別</span></h3><div class="mission">主辦（寺方）2026-08-24 交代的 23 項工作內容。『原文』欄一字不改，是核對的依據；『重點』是我拆出來的執行要項，供各組使用。要新增或修訂請改這個檔，儀表板會跟著更新。</div></header><div class="rqs"><div class="rq" id="req-1"><div class="rqh"><b>第 1 條</b>邀請卡</div><blockquote>邀請卡</blockquote><ul><li>設計、印製、寄送</li><li>卡上印動土編號與報到口指引</li><li>現場憑卡查驗</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-reception-checkin">報到接待組</a><a class="oc" href="#g-publicity-memorial">文宣紀念組</a></div></div><div class="rq" id="req-2"><div class="rqh"><b>第 2 條</b>威毅＆竹間團隊</div><blockquote>威毅＆竹間團隊</blockquote><ul><li>營造（威毅）與建築師事務所（竹間）為建設團隊</li><li>專人自車站／飯店起點對點陪同</li><li>專屬席位、引見總住持與宗務長</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-reception-checkin">報到接待組</a></div></div><div class="rq" id="req-3"><div class="rqh"><b>第 3 條</b>火車與入住晚宴綵排</div><blockquote>火車時間，下午3點之前到，入住後，晚上晚宴及綵排<br>10:20出發？<br>9:30<br>12:00<br>火車要看車型，太魯閣或莒光</blockquote><ul><li>下午 3 點前必須抵達台東</li><li>出發時間三個選項：10:20／9:30／12:00</li><li>車型看太魯閣或莒光</li><li>抵達後入住，晚上晚宴及綵排</li><li>★ 12:00 出發不論車型都到不了，需正式排除（見待寺方裁決）</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-transport">交通組</a><a class="oc" href="#g-lodging-catering">住宿餐飲組</a></div></div><div class="rq" id="req-4"><div class="rqh"><b>第 4 條</b>開場與動土流程</div><blockquote>楞嚴神鼓開場，花獻供，向後拿鏟子鏟土 ，108個工作人員協助再，去下個區拿一筒金去挖金</blockquote><ul><li>楞嚴神鼓開場（本寺兒童鼓隊）</li><li>花獻供</li><li>★ 向後拿鏟子——獻花供後轉身向後接鏟，不是排隊領取</li><li>108 個工作人員協助</li><li>鏟土後往下一區拿一筒金去挖金</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-ceremony-liturgy">典禮儀軌組</a><a class="oc" href="#g-groundbreaking-ops">動土執行組</a></div></div><div class="rq" id="req-5"><div class="rqh"><b>第 5 條</b>一筒金要有大池</div><blockquote>一筒金：自己去裝，要有大池</blockquote><ul><li>功德主自己動手裝，不是由人發放</li><li>要設大池（裝金池）</li><li>池深與取用高度要考量長者彎腰</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-yitongjin-station">一筒金組</a></div></div><div class="rq" id="req-6"><div class="rqh"><b>第 6 條</b>除草開闢停車場</div><blockquote>要有除草把停車場弄出來</blockquote><ul><li>除草整地，把停車場開闢出來</li><li>與威毅、竹間確認整地進度</li><li>救護車動線要畫進停車場規劃並全日淨空</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-site-works">場地工務組</a></div></div><div class="rq" id="req-7"><div class="rqh"><b>第 7 條</b>佛龕用 LED</div><blockquote>佛龕用led</blockquote><ul><li>佛龕採 LED 燈組</li><li>電源與線路（戶外防風防雨）</li><li>點燈時機屬儀軌節點，燈控人員聽組長口令</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-ceremony-liturgy">典禮儀軌組</a><a class="oc" href="#g-site-works">場地工務組</a></div></div><div class="rq" id="req-8"><div class="rqh"><b>第 8 條</b>動線三站</div><blockquote>動線： 拿供花，拿鏟，領一筒金</blockquote><ul><li>第一站拿供花</li><li>第二站拿鏟</li><li>第三站領一筒金</li><li>全線分段站崗引導，含集結區、緩衝區、離場動線</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-groundbreaking-ops">動土執行組</a><a class="oc" href="#g-yitongjin-station">一筒金組</a></div></div><div class="rq" id="req-9"><div class="rqh"><b>第 9 條</b>鐘鼓齊鳴真人敲</div><blockquote>鐘鼓齊鳴，真的人敲</blockquote><ul><li>★ 真人敲，不用錄音</li><li>鐘、鼓各 2 位一班共兩班輪替（全日多次齊鳴、防疲勞誤點）</li><li>事前綵排對點</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-ceremony-liturgy">典禮儀軌組</a></div></div><div class="rq" id="req-10"><div class="rqh"><b>第 10 條</b>福田服務台與結緣品分區</div><blockquote>福田服務台，現場接單；結緣品流通區是另一區</blockquote><ul><li>福田服務台現場接受認供／功德項目接單</li><li>★ 結緣品流通區是另一區，兩區分開</li><li>收據、登錄與金流安全</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-futian-service-desk">福田服務台組</a><a class="oc" href="#g-gift-distribution">結緣品組</a></div></div><div class="rq" id="req-11"><div class="rqh"><b>第 11 條</b>改名為動土編號</div><blockquote>鏟土順序改名為動土編號</blockquote><ul><li>★「鏟土順序」一律改稱「動土編號」</li><li>名單、唱名、卡片、後台用字全部統一</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-groundbreaking-ops">動土執行組</a><a class="oc" href="#g-roster-info">名單資訊組</a></div></div><div class="rq" id="req-12"><div class="rqh"><b>第 12 條</b>動土編號的編法</div><blockquote>動土編號以委員及功德項目為編號，例如開山1，開山2， 袈裟1</blockquote><ul><li>以委員級別及功德項目編號</li><li>例：開山1、開山2、袈裟1</li><li>全數約 1080 位編入 10 梯</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-groundbreaking-ops">動土執行組</a><a class="oc" href="#g-roster-info">名單資訊組</a></div></div><div class="rq" id="req-13"><div class="rqh"><b>第 13 條</b>手動改分派後自動接續</div><blockquote>各項分配要有讓工作人員手動更改分派的功能，若工作人員手動更改後，你要自動接續依著調整分派內容</blockquote><ul><li>工作人員可手動更改分派</li><li>★ 改完之後系統要自動接續調整其餘分派內容</li><li>現場即時列印異動名單</li><li>★ 此功能在後台仍未接上介面（見待寺方裁決）</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-roster-info">名單資訊組</a></div></div><div class="rq" id="req-14"><div class="rqh"><b>第 14 條</b>執事名單用 2026 版且可改</div><blockquote>執事名單要用2026名單，要有讓工作人員手動更改執事名稱的功能</blockquote><ul><li>★ 一律用 2026 執事名單</li><li>工作人員可手動更改執事名稱</li><li>★ 總清單「2026 護法會職稱」欄有 225 位空白，需寺方補齊</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-roster-info">名單資訊組</a></div></div><div class="rq" id="req-15"><div class="rqh"><b>第 15 條</b>結緣品類別要顯示在名單上</div><blockquote>結緣品類別要顯示在名單上：一筒金是功德主，貴賓等特殊名單才有，巧克力存錢筒是出席的人都有，圓滿50萬以上人有一條999約金的金鏟子金項鍊；兒童有兒童版的一筒金；貴賓是一筒金加大存錢筒</blockquote><ul><li>★ 結緣品類別要顯示在名單上</li><li>一筒金：功德主、貴賓等特殊名單才有</li><li>巧克力存錢筒：出席的人都有</li><li>圓滿 50 萬以上：一條 999 金的金鏟子金項鍊</li><li>兒童：兒童版的一筒金</li><li>貴賓：一筒金 ＋ 大存錢筒</li><li>★ 一筒金目前被兩組重複備貨，需定案由哪一組發（見待寺方裁決）</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-gift-distribution">結緣品組</a><a class="oc" href="#g-yitongjin-station">一筒金組</a></div></div><div class="rq" id="req-16"><div class="rqh"><b>第 16 條</b>每梯 108 位，貴賓彈性</div><blockquote>每次鏟土大眾是108位一排，貴賓是不一定，要看身份及團體</blockquote><ul><li>大眾每梯 108 位一排</li><li>★ 貴賓梯人數不一定，看身份及團體</li><li>站位標記需可局部啟用</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-groundbreaking-ops">動土執行組</a></div></div><div class="rq" id="req-17"><div class="rqh"><b>第 17 條</b>房費表給自費者</div><blockquote>提供房費表給自費的人，依房價</blockquote><ul><li>依房價製作房費表</li><li>提供給自費住宿者</li><li>自費與寺方招待要分得清楚</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-lodging-catering">住宿餐飲組</a></div></div><div class="rq" id="req-18"><div class="rqh"><b>第 18 條</b>身份別八類</div><blockquote>標記身份別：vip，僧團，長老長老尼，建設團隊，功德主，隨喜大眾，工作人員，楞嚴神鼓兒童及家長</blockquote><ul><li>VIP</li><li>僧團</li><li>長老長老尼</li><li>建設團隊</li><li>功德主</li><li>隨喜大眾</li><li>工作人員</li><li>楞嚴神鼓兒童及家長</li><li>★ 同行者（可能上千人）歸哪一類尚未定案，影響存錢筒訂製數量</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-reception-checkin">報到接待組</a><a class="oc" href="#g-medical">醫護救護組</a></div></div><div class="rq" id="req-19"><div class="rqh"><b>第 19 條</b>紀念主題字與 logo</div><blockquote>千手護手，千眼照見，萬眾一心，千鏟立基，寶嚴禪寺開山動土紀念 丙午年冬月18日＋ 寶嚴logo</blockquote><ul><li>主題字：千手護手，千眼照見，萬眾一心，千鏟立基</li><li>落款：寶嚴禪寺開山動土紀念　丙午年冬月18日</li><li>加寶嚴 logo</li><li>應用於背板、鏟具緞帶、紀念品、邀請卡</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-publicity-memorial">文宣紀念組</a></div></div><div class="rq" id="req-20"><div class="rqh"><b>第 20 條</b>灑淨繞圈與持咒</div><blockquote>動土開始，灑淨繞三圈，動土完的人就繞圈持咒，鐘鼓齊鳴＋僧團帶領持楞嚴咒，有放大蒙山及三皈依</blockquote><ul><li>動土開始先灑淨繞三圈</li><li>動土完成的人繞圈持咒</li><li>鐘鼓齊鳴</li><li>僧團帶領持楞嚴咒</li><li>放大蒙山</li><li>三皈依</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-ceremony-liturgy">典禮儀軌組</a></div></div><div class="rq" id="req-21"><div class="rqh"><b>第 21 條</b>環保垃圾</div><blockquote>環保垃圾</blockquote><ul><li>垃圾分類回收站與動線</li><li>2500 人規模的清運排班</li><li>典後場地復原</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-site-works">場地工務組</a></div></div><div class="rq" id="req-22"><div class="rqh"><b>第 22 條</b>流動廁所</div><blockquote>流動廁所</blockquote><ul><li>依 2500 人規模估算座數</li><li>清潔與補給排班</li><li>位置要離餐飲區有距離、離席區不能太遠</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-medical">醫護救護組</a><a class="oc" href="#g-site-works">場地工務組</a></div></div><div class="rq" id="req-23"><div class="rqh"><b>第 23 條</b>餐食飲料</div><blockquote>餐食飲料</blockquote><ul><li>12/25 晚宴</li><li>12/26 現場便當與茶水（2500 人規模）</li><li>齋食、僧團過堂、兒童與長者的特殊需求</li></ul><div class="own"><span>負責組別</span><a class="oc" href="#g-lodging-catering">住宿餐飲組</a><a class="oc" href="#g-medical">醫護救護組</a></div></div></div></section>
+<section class="card" id="g-hq" data-group="大典統籌部">
   <header class="ch">
     <h3>大典統籌部<span class="pts">需求條 </span></h3>
     <div class="mission">總指揮與裁決：跨部爭議、時間軸調整、突發狀況的唯一決策點。</div>
@@ -189,6 +215,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>部主管</b><div class="duty">儀典、知客、護持、後勤各一位；只對執行總幹事回報。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>總指揮台幕僚</b><div class="duty">無線電總機、紀錄、對外聯繫（警消、里辦、媒體）。</div></td><td class="num">0<span class="of">/3</span><span class="short">缺 3</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>機動組</b><div class="duty">不編固定崗，由執行總幹事直接調度補人力缺口與處理突發。</div></td><td class="num">0<span class="of">/12</span><span class="short">缺 12</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
+  
   
   <div class="acc">
     <details><summary>大典前準備（5）</summary><ul><li>11/20 前：四部主管與各組組長人選定案，發布組織圖</li><li>12/05 前：總時間軸定稿（12/25 出發至 12/26 圓滿），各組時序併軌檢查一次</li><li>12/15 前：無線電頻道分配表、緊急聯絡樹、雨備決策條件（誰在什麼時間點依什麼標準決定）</li><li>12/20 前：全體組長會議，逐組確認交接界面</li><li>12/25 晚：綵排後召開檢討會，隔日流程當場修正並發布</li></ul></details>
@@ -218,6 +245,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>法器文物管理</b><div class="duty">楊枝淨水、大磬引磬木魚、蒙山施食台、皈依牒等法器物品定位與遞送。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>機動組員</b><div class="duty">各儀軌段落間補位、遞水、突發狀況支援。</div></td><td class="num">0<span class="of">/8</span><span class="short">缺 8</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（4 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 4 條　開場與動土流程</div><blockquote>楞嚴神鼓開場，花獻供，向後拿鏟子鏟土 ，108個工作人員協助再，去下個區拿一筒金去挖金</blockquote><ul><li>楞嚴神鼓開場（本寺兒童鼓隊）</li><li>花獻供</li><li>★ 向後拿鏟子——獻花供後轉身向後接鏟，不是排隊領取</li><li>108 個工作人員協助</li><li>鏟土後往下一區拿一筒金去挖金</li></ul></div><div class="ri"><div class="rn">第 7 條　佛龕用 LED</div><blockquote>佛龕用led</blockquote><ul><li>佛龕採 LED 燈組</li><li>電源與線路（戶外防風防雨）</li><li>點燈時機屬儀軌節點，燈控人員聽組長口令</li></ul></div><div class="ri"><div class="rn">第 9 條　鐘鼓齊鳴真人敲</div><blockquote>鐘鼓齊鳴，真的人敲</blockquote><ul><li>★ 真人敲，不用錄音</li><li>鐘、鼓各 2 位一班共兩班輪替（全日多次齊鳴、防疲勞誤點）</li><li>事前綵排對點</li></ul></div><div class="ri"><div class="rn">第 20 條　灑淨繞圈與持咒</div><blockquote>動土開始，灑淨繞三圈，動土完的人就繞圈持咒，鐘鼓齊鳴＋僧團帶領持楞嚴咒，有放大蒙山及三皈依</blockquote><ul><li>動土開始先灑淨繞三圈</li><li>動土完成的人繞圈持咒</li><li>鐘鼓齊鳴</li><li>僧團帶領持楞嚴咒</li><li>放大蒙山</li><li>三皈依</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（7）</summary><ul><li>11/30 前：完成全程儀軌腳本（含每段口令、鐘鼓提示點、LED點燈時機），送宗務長核定</li><li>12/05 前：與楞嚴神鼓兒童鼓隊確認開場曲目、上下場位置、換裝空間需求</li><li>12/10 前：鐘鼓架、大鐘大鼓運抵確認與定位圖；執槌手8位排班表定案</li><li>12/10 前：佛龕LED安裝驗收（與建設團隊協調電源），演練點燈時機</li><li>12/15 前：灑淨繞三圈路線與動土後繞圈持咒路線畫定，與動土執行組合圖避免交叉</li><li>12/20 前：大蒙山施食台位置、三皈依集合區規劃完成，法器清點裝箱</li><li>12/25 晚：娜路彎飯店晚宴後全流程綵排——神鼓開場→獻花供→灑淨→鐘鼓齊鳴→持咒繞圈，逐段對點</li></ul></details>
     <details><summary>當日時序（11）</summary><ul><li><span class="tm">12/25 19:30</span>晚宴後綵排：司儀、鐘鼓、神鼓、僧團代表全段走位對點</li><li><span class="tm">12/26 06:30</span>組員到位：供桌、法器、鐘鼓架、佛龕LED最後檢查與試燈</li><li><span class="tm">12/26 08:00</span>僧團39位集結接待，楞嚴神鼓兒童與家長報到、換裝、暖鼓</li><li><span class="tm">12/26 待定（開典）</span>楞嚴神鼓開場；收鼓後司儀銜接、僧團迎請入場</li><li><span class="tm">12/26 待定</span>獻花供儀程：引導各梯依序獻花供，佛龕LED依儀軌點亮</li><li><span class="tm">12/26 待定</span>灑淨繞三圈：僧團主法灑淨，引導組開道維持隊形</li><li><span class="tm">12/26 待定</span>動土進行中：每梯動土起鏟時鐘鼓齊鳴（真人敲，兩班輪替）</li><li><span class="tm">12/26 待定</span>動土完成者導入繞圈持楞嚴咒動線，僧團帶領持咒</li><li><span class="tm">12/26 待定</span>大蒙山施食：施食台就位、法器遞送、司儀引導大眾隨文觀想</li><li><span class="tm">12/26 待定</span>三皈依：集合引導、僧團授三皈、圓滿迴向</li><li><span class="tm">12/26 典後</span>法器清點裝箱、佛龕LED關燈斷電、鐘鼓撤收</li></ul></details>
@@ -245,6 +273,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>動線分段引導</b><div class="duty">拿供花→拿鏟→領一筒金全線分段站崗，含集結區、緩衝區、離場動線。</div></td><td class="num">0<span class="of">/30</span><span class="short">缺 30</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>貴賓梯專責</b><div class="duty">貴賓梯人數不定（看身份及團體），專人接待、彈性排位、貴賓結緣品核發。</div></td><td class="num">0<span class="of">/6</span><span class="short">缺 6</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（5 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 4 條　開場與動土流程</div><blockquote>楞嚴神鼓開場，花獻供，向後拿鏟子鏟土 ，108個工作人員協助再，去下個區拿一筒金去挖金</blockquote><ul><li>楞嚴神鼓開場（本寺兒童鼓隊）</li><li>花獻供</li><li>★ 向後拿鏟子——獻花供後轉身向後接鏟，不是排隊領取</li><li>108 個工作人員協助</li><li>鏟土後往下一區拿一筒金去挖金</li></ul></div><div class="ri"><div class="rn">第 8 條　動線三站</div><blockquote>動線： 拿供花，拿鏟，領一筒金</blockquote><ul><li>第一站拿供花</li><li>第二站拿鏟</li><li>第三站領一筒金</li><li>全線分段站崗引導，含集結區、緩衝區、離場動線</li></ul></div><div class="ri"><div class="rn">第 11 條　改名為動土編號</div><blockquote>鏟土順序改名為動土編號</blockquote><ul><li>★「鏟土順序」一律改稱「動土編號」</li><li>名單、唱名、卡片、後台用字全部統一</li></ul></div><div class="ri"><div class="rn">第 12 條　動土編號的編法</div><blockquote>動土編號以委員及功德項目為編號，例如開山1，開山2， 袈裟1</blockquote><ul><li>以委員級別及功德項目編號</li><li>例：開山1、開山2、袈裟1</li><li>全數約 1080 位編入 10 梯</li></ul></div><div class="ri"><div class="rn">第 16 條　每梯 108 位，貴賓彈性</div><blockquote>每次鏟土大眾是108位一排，貴賓是不一定，要看身份及團體</blockquote><ul><li>大眾每梯 108 位一排</li><li>★ 貴賓梯人數不一定，看身份及團體</li><li>站位標記需可局部啟用</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（9）</summary><ul><li>11/25 前：動土編號編碼定案（以委員及功德項目編號：開山1、開山2、袈裟1…），全數1080位編入10梯</li><li>11/30 前：分派系統驗收——工作人員手動更改分派後，系統須自動接續調整其餘分派；含執事名稱可改</li><li>12/05 前：108個鏟土位地面標記設計（編號樁或地貼），與威毅、竹間確認動土區整地進度</li><li>12/10 前：鏟具240支到位（108×2輪替＋備品24），供花、一筒金、裝金池備量確認</li><li>12/15 前：動線圖定稿：集結區→供花發放→獻花供→鏟土區→一筒金裝金池→離場，與儀軌組合圖</li><li>12/18 前：108位協助人員與9位小組長名單定案，發站位圖與勤前說明資料</li><li>12/20 前：貴賓梯名單初稿（依身份及團體彈性編排），與知客組對齊貴賓識別</li><li>12/25 下午：抵台東後場勘：108位標記實地確認、唱名台音響測試、裝金池定位</li><li>12/25 晚：綵排：協助人員站位演練一輪、唱名流程與換梯節奏試跑（目標每梯含進退場15分鐘內）</li></ul></details>
     <details><summary>當日時序（8）</summary><ul><li><span class="tm">12/26 06:00</span>全組到位：108位標記、鏟具240支、唱名台、裝金池最後檢查</li><li><span class="tm">12/26 07:00</span>108位協助人員勤前集合，分9區小組長帶開站位</li><li><span class="tm">12/26 08:00</span>集結區開放：依動土編號分梯報到，發梯次識別</li><li><span class="tm">12/26 待定（開典後）</span>第1梯（含貴賓依身份團體安排）：唱名對位→拿供花→獻花供→拿鏟→鏟土（鐘鼓齊鳴）→領一筒金</li><li><span class="tm">12/26 全程</span>第2至10梯依序輪替：每梯108位一排，前梯進裝金池時後梯即入場對位，鏟具同步回收輪替</li><li><span class="tm">12/26 全程</span>唱名台即時處理現場改派：手動更改後系統自動接續調整，異動名單傳分區小組長</li><li><span class="tm">12/26 待定</span>第10梯圓滿：全數鏟具回收清點，動土完成者交儀軌組導入繞圈持咒</li><li><span class="tm">12/26 典後</span>鏟具、標記、唱名台撤收；一筒金區餘量清點回報</li></ul></details>
@@ -271,6 +300,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>私家車與停車引導</b><div class="duty">會場聯外道路指揮、停車場分區引導、身障與貴賓車位管制、散場疏導</div></td><td class="num">0<span class="of">/16</span><span class="short">缺 16</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>回程分批控管</b><div class="duty">12/26與12/27兩批回程名單核對、候車區秩序、與台鐵及車行確認回程班次</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（1 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 3 條　火車與入住晚宴綵排</div><blockquote>火車時間，下午3點之前到，入住後，晚上晚宴及綵排<br>10:20出發？<br>9:30<br>12:00<br>火車要看車型，太魯閣或莒光</blockquote><ul><li>下午 3 點前必須抵達台東</li><li>出發時間三個選項：10:20／9:30／12:00</li><li>車型看太魯閣或莒光</li><li>抵達後入住，晚上晚宴及綵排</li><li>★ 12:00 出發不論車型都到不了，需正式排除（見待寺方裁決）</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（6）</summary><ul><li>10月中前：向台鐵申請專開列車，確認車型（太魯閣約3.5-4小時、莒光約5.5小時以上）；若定太魯閣建議10:20發車，若只租得到莒光則須9:30發車，才能確保下午3點前抵台東</li><li>10月底前：統計搭火車人數（含楞嚴神鼓兒童及家長、僧團39位）完成車廂劃位，僧團與長老長老尼安排前段車廂</li><li>11月中前：簽約遊覽車（估30-35輛，含車站接駁、飯店往返會場、12/26未過夜者送站），要求車行提供備用車2輛</li><li>11月底前：與威毅、竹間確認會場聯外道路動線與停車分區圖，會勘一次；印製車輛通行證與停車證</li><li>12月上旬：印發乘車證與回程分批通知（12/26當晚回、12/27回兩批名單），彙整私家車前來者車號估算車位需求</li><li>12/20前：所有隨車與引導人員行前說明會，發放背心、旗子、對講機、名單</li></ul></details>
     <details><summary>當日時序（8）</summary><ul><li><span class="tm">12/25 07:30</span>隨車人員於出發站集合，設報到點、舉牌分車廂引導上車</li><li><span class="tm">12/25 09:30或10:20</span>專開火車發車（依車型定案時刻），車上點名回報調度中心</li><li><span class="tm">12/25 14:30前</span>抵台東站，月台引導出站，依編組上遊覽車往娜路彎飯店</li><li><span class="tm">12/25 18:00</span>晚宴與綵排接駁（飯店內或往返會場，依綵排地點調度）</li><li><span class="tm">12/26 06:30</span>飯店大廳集合分車，遊覽車分批發車往都蘭會場；停車引導同步就位</li><li><span class="tm">12/26 08:00</span>私家車與貴賓車陸續抵達，分區引導停車</li><li><span class="tm">12/26 14:00起</span>大典圓滿後分批疏散：當日回程者送台東站，住宿者送回飯店</li><li><span class="tm">12/27 上午</span>第二批回程：飯店退房後接駁至台東站，核對名單送車</li></ul></details>
@@ -296,6 +326,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>茶水站服務</b><div class="duty">會場設4-6處茶水站，全日供應熱茶與飲水，隨時補給</div></td><td class="num">0<span class="of">/16</span><span class="short">缺 16</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>僧團與貴賓齋食</b><div class="duty">僧團39位過堂齋食另備專區，貴賓席茶點與用餐照料</div></td><td class="num">0<span class="of">/6</span><span class="short">缺 6</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（3 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 3 條　火車與入住晚宴綵排</div><blockquote>火車時間，下午3點之前到，入住後，晚上晚宴及綵排<br>10:20出發？<br>9:30<br>12:00<br>火車要看車型，太魯閣或莒光</blockquote><ul><li>下午 3 點前必須抵達台東</li><li>出發時間三個選項：10:20／9:30／12:00</li><li>車型看太魯閣或莒光</li><li>抵達後入住，晚上晚宴及綵排</li><li>★ 12:00 出發不論車型都到不了，需正式排除（見待寺方裁決）</li></ul></div><div class="ri"><div class="rn">第 17 條　房費表給自費者</div><blockquote>提供房費表給自費的人，依房價</blockquote><ul><li>依房價製作房費表</li><li>提供給自費住宿者</li><li>自費與寺方招待要分得清楚</li></ul></div><div class="ri"><div class="rn">第 23 條　餐食飲料</div><blockquote>餐食飲料</blockquote><ul><li>12/25 晚宴</li><li>12/26 現場便當與茶水（2500 人規模）</li><li>齋食、僧團過堂、兒童與長者的特殊需求</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（6）</summary><ul><li>10月中前：與娜路彎確認12/25房間總量（估依身份別分配：僧團、長老長老尼、貴賓、功德主、工作人員、楞嚴神鼓家庭房），簽約下訂</li><li>10月底前：編製房費表——依房型房價分列（雙人房、家庭房、套房），標明招待與自費對象，自費者依房價收費並公告付款方式</li><li>11月中前：確認12/25晚宴場地與菜單（全素）、桌數與席次原則；同步敲定綵排場地與時段，通知典禮儀軌組與楞嚴神鼓</li><li>11月底前：便當廠商比價簽約（2500個素食便當，分午餐時段配送，須具大量出餐與保溫能力，台東在地廠商為主），並訂茶水、紙杯、保溫桶</li><li>12月上旬：依報名總表鎖定房間分配與晚宴席次；印製餐券（隨識別證發放）；確認兒童餐與軟食需求</li><li>12/20前：發放組與茶水組行前說明，確認12/26各發放點位置、便當到貨時間與保溫動線</li></ul></details>
     <details><summary>當日時序（10）</summary><ul><li><span class="tm">12/25 14:00</span>飯店大廳報到櫃檯開設，依身份別分流發房卡；房費結算桌同步收自費款</li><li><span class="tm">12/25 17:30</span>晚宴會場開放帶位，僧團與長老席先就座</li><li><span class="tm">12/25 18:00</span>晚宴開始；綵排組同步確認綵排場地音響與流程</li><li><span class="tm">12/25 20:00</span>綵排進行（楞嚴神鼓、鏟土動線走位），供應茶水</li><li><span class="tm">12/26 05:30</span>與飯店確認早餐供應時段配合早發車；茶水站人員先行赴會場佈點</li><li><span class="tm">12/26 08:00</span>會場茶水站全面開放，僧團齋食專區備妥</li><li><span class="tm">12/26 11:00</span>便當到貨驗收（分批保溫），各發放點就位</li><li><span class="tm">12/26 11:30-13:00</span>憑餐券分流發放便當，長者兒童優先；貴賓席與僧團專區送餐</li><li><span class="tm">12/26 14:00起</span>剩餘便當與茶水收整，未領者補發，與環保組交接廚餘與回收</li><li><span class="tm">12/27 上午</span>協助第二批退房、房卡回收、與飯店總對帳結案</li></ul></details>
@@ -322,6 +353,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>問題排除櫃檯</b><div class="duty">處理沒帶邀請卡、名單查無、臨時加人、同行者登記等例外案件，避免堵塞主查驗口。</div></td><td class="num">0<span class="of">/6</span><span class="short">缺 6</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>引導人力</b><div class="duty">自停車場、火車接駁下車點至報到區沿線舉牌引導，報到後依身份別引導至對應等候區。</div></td><td class="num">0<span class="of">/20</span><span class="short">缺 20</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（3 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 1 條　邀請卡</div><blockquote>邀請卡</blockquote><ul><li>設計、印製、寄送</li><li>卡上印動土編號與報到口指引</li><li>現場憑卡查驗</li></ul></div><div class="ri"><div class="rn">第 2 條　威毅＆竹間團隊</div><blockquote>威毅＆竹間團隊</blockquote><ul><li>營造（威毅）與建築師事務所（竹間）為建設團隊</li><li>專人自車站／飯店起點對點陪同</li><li>專屬席位、引見總住持與宗務長</li></ul></div><div class="ri"><div class="rn">第 18 條　身份別八類</div><blockquote>標記身份別：vip，僧團，長老長老尼，建設團隊，功德主，隨喜大眾，工作人員，楞嚴神鼓兒童及家長</blockquote><ul><li>VIP</li><li>僧團</li><li>長老長老尼</li><li>建設團隊</li><li>功德主</li><li>隨喜大眾</li><li>工作人員</li><li>楞嚴神鼓兒童及家長</li><li>★ 同行者（可能上千人）歸哪一類尚未定案，影響存錢筒訂製數量</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（7）</summary><ul><li>11/15 前：確認邀請卡設計定稿並寄發，卡上印動土編號與報到口指引（配合第 11、12 條之動土編號制度）。</li><li>11/30 前：定稿九種身份別的識別物（色帶／掛牌／手環）樣式與數量，含備品各加 10%。</li><li>12/05 前：與名單系統對齊，列印及匯出可離線查詢的完整名單（2026 執事名單版本），並確認工作人員可現場手動改身份、系統自動接續。</li><li>12/10 前：與威毅、竹間確認出席名單、抵達方式與接待需求，指定專責窗口互留聯絡方式。</li><li>12/15 前：完成報到區配置圖（8 查驗口＋貴賓通道＋兒童家長口＋例外櫃檯），與場地組確認帳棚、桌椅、電源。</li><li>12/20 前：全組線上行前會，演練例外情境（無卡、身份爭議、貴賓提前到）。</li><li>12/24 前：識別物、名單、對講機、指示牌全數打包點交運抵台東。</li></ul></details>
     <details><summary>當日時序（8）</summary><ul><li><span class="tm">12/25 15:00 前</span>火車站出口設接待點，威毅＆竹間專責接待與貴賓陪同人員到位，引導入住娜路彎飯店。</li><li><span class="tm">12/25 18:00</span>晚宴報到與席次引導；發放隔日識別物給已到功德主，分散 12/26 早上壓力。</li><li><span class="tm">12/25 20:00</span>綵排時同步演練報到動線與貴賓引導路線，組內最後檢討。</li><li><span class="tm">12/26 06:30</span>全組到位，查驗口、識別物、名單、對講機開機測試。</li><li><span class="tm">12/26 07:00</span>開放報到，大眾通道與貴賓通道同時運作，引導人力沿線就位。</li><li><span class="tm">12/26 08:30</span>貴賓、長老長老尼、建設團隊陪同就座；僧團就位確認。</li><li><span class="tm">12/26 典禮中</span>保留 2 個查驗口處理遲到者，其餘人力轉支援各梯鏟土集結區的身份確認。</li><li><span class="tm">12/26 典禮後</span>陪同貴賓與建設團隊送離，回收可重複使用識別物，清點回報實到人數。</li></ul></details>
@@ -345,6 +377,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>救護車與後送聯絡</b><div class="duty">守救護車位與出場動線淨空，與交通組確認救護車進出路徑全日不被停車佔住。</div></td><td class="num">0<span class="of">/2</span><span class="short">缺 2</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>飲水與防護巡場</b><div class="duty">巡場主動遞水、勸導遮陽保暖，找出還沒倒下但已不適的人。</div></td><td class="num">0<span class="of">/6</span><span class="short">缺 6</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（3 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 18 條　身份別八類</div><blockquote>標記身份別：vip，僧團，長老長老尼，建設團隊，功德主，隨喜大眾，工作人員，楞嚴神鼓兒童及家長</blockquote><ul><li>VIP</li><li>僧團</li><li>長老長老尼</li><li>建設團隊</li><li>功德主</li><li>隨喜大眾</li><li>工作人員</li><li>楞嚴神鼓兒童及家長</li><li>★ 同行者（可能上千人）歸哪一類尚未定案，影響存錢筒訂製數量</li></ul></div><div class="ri"><div class="rn">第 22 條　流動廁所</div><blockquote>流動廁所</blockquote><ul><li>依 2500 人規模估算座數</li><li>清潔與補給排班</li><li>位置要離餐飲區有距離、離席區不能太遠</li></ul></div><div class="ri"><div class="rn">第 23 條　餐食飲料</div><blockquote>餐食飲料</blockquote><ul><li>12/25 晚宴</li><li>12/26 現場便當與茶水（2500 人規模）</li><li>齋食、僧團過堂、兒童與長者的特殊需求</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（6）</summary><ul><li>11/30 前：確認護理人力來源（信眾中的醫護專業或委外救護團隊），簽妥到場時數</li><li>12/05 前：向台東縣消防局報備活動，取得就近救護資源與通報專線，確認最近急救責任醫院與車程</li><li>12/10 前：AED 至少 2 台（租借或借用）、擔架 2 副、輪椅 6 台、急救箱 4 組到位</li><li>12/15 前：兩處救護站位置與場地工務組合圖，救護車動線畫入停車場規劃並全程淨空</li><li>12/20 前：全組行前訓練：中暑與失溫辨識、長者跌倒處置、通報與後送流程</li><li>12/25 晚：綵排時實走一次「動土區傷者後送至救護車」路線並計時</li></ul></details>
     <details><summary>當日時序（6）</summary><ul><li><span class="tm">12/25 全程</span>隨車醫護 1 位隨專開列車，車程 3 小時以上、長者眾多</li><li><span class="tm">12/25 18:00</span>晚宴期間飯店端待命（噎食與飲酒不適風險）</li><li><span class="tm">12/26 05:30</span>兩處救護站開設，AED 與擔架定位，確認救護車位淨空</li><li><span class="tm">12/26 07:00</span>巡場開始：報到排隊隊伍是第一個中暑或失溫熱點</li><li><span class="tm">12/26 全程</span>前進救護組隨每梯動土移動，長老席與兒童區定點待命</li><li><span class="tm">12/26 典後</span>回報全日就診人次與處置紀錄，交統籌部歸檔</li></ul></details>
@@ -369,6 +402,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>引導與排隊管理</b><div class="duty">維持排隊動線，分流「來認供」與「來領結緣品」的信眾，指引後者往流通區。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>款項護衛</b><div class="duty">定時雙人收款護送、保管箱看守；全日不離崗，交接需簽名。</div></td><td class="num">0<span class="of">/2</span><span class="short">缺 2</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（1 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 10 條　福田服務台與結緣品分區</div><blockquote>福田服務台，現場接單；結緣品流通區是另一區</blockquote><ul><li>福田服務台現場接受認供／功德項目接單</li><li>★ 結緣品流通區是另一區，兩區分開</li><li>收據、登錄與金流安全</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（5）</summary><ul><li>12/5 前：確定功德項目清單、金額級距與收據格式，印製認供單一式三聯至少 800 份</li><li>12/10 前：確認現場收款方式（現金、匯款單、行動支付 QR），申請行動網路備援（現場為都蘭山區，訊號需實測）</li><li>12/15 前：與名單資訊組確認「現場新增認供」如何回寫系統、如何補發動土編號與結緣品資格</li><li>12/20 前：桌椅、帳篷、保管箱、零錢箱、發電或延長線需求送場地總務彙整</li><li>12/24 前：全組沙盤推演一次：接單→收款→開據→登錄→引導領結緣品的完整流程</li></ul></details>
     <details><summary>當日時序（5）</summary><ul><li><span class="tm">12/25 晚宴時段</span>於飯店設臨時服務台試營運，接受功德主提前認供，同步驗證系統回寫流程</li><li><span class="tm">12/26 07:00</span>現場服務台開台：帳篷、指標、收據、零錢、系統連線全數就位</li><li><span class="tm">12/26 08:00-15:00</span>全時段接單收款；每小時對帳一次，雙人護送款項入保管箱</li><li><span class="tm">12/26 典禮進行中</span>保留兩櫃台服務，其餘人力支援排隊分流；新認供即時通報名單資訊組</li><li><span class="tm">12/26 15:30</span>收台總對帳：現金、票據、收據存根三方核對，簽名封存後統一移交常住</li></ul></details>
@@ -393,6 +427,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>庫存補貨</b><div class="duty">後方倉儲盤點，各發放線存量低於三成即補貨，隨時回報組長各品項餘量。</div></td><td class="num">0<span class="of">/6</span><span class="short">缺 6</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>動線引導</b><div class="duty">在一筒金區出口與流通區入口引導人流分線，避免與福田服務台人潮交織。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（2 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 10 條　福田服務台與結緣品分區</div><blockquote>福田服務台，現場接單；結緣品流通區是另一區</blockquote><ul><li>福田服務台現場接受認供／功德項目接單</li><li>★ 結緣品流通區是另一區，兩區分開</li><li>收據、登錄與金流安全</li></ul></div><div class="ri"><div class="rn">第 15 條　結緣品類別要顯示在名單上</div><blockquote>結緣品類別要顯示在名單上：一筒金是功德主，貴賓等特殊名單才有，巧克力存錢筒是出席的人都有，圓滿50萬以上人有一條999約金的金鏟子金項鍊；兒童有兒童版的一筒金；貴賓是一筒金加大存錢筒</blockquote><ul><li>★ 結緣品類別要顯示在名單上</li><li>一筒金：功德主、貴賓等特殊名單才有</li><li>巧克力存錢筒：出席的人都有</li><li>圓滿 50 萬以上：一條 999 金的金鏟子金項鍊</li><li>兒童：兒童版的一筒金</li><li>貴賓：一筒金 ＋ 大存錢筒</li><li>★ 一筒金目前被兩組重複備貨，需定案由哪一組發（見待寺方裁決）</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（7）</summary><ul><li>11/20 前：五類結緣品數量定案並下訂——巧克力存錢筒 2800 個（2500 人＋10% 備量）、一筒金依功德主貴賓名單＋5%、兒童版一筒金依兒童名冊、金鏟子金項鍊依 50 萬以上名單足額＋保險、大存錢筒依貴賓名單。</li><li>12/05 前：確認名單系統可列印「身份別＋可領類別」對照表，並支援現場手動改派後自動更新（與名單組對齊第 13、14 條機制）。</li><li>12/10 前：金鏟子金項鍊點收入庫，拍照存證、投保運送險，指定雙人保管制。</li><li>12/15 前：流通區平面圖定稿——與福田服務台分開設區，五線巧克力＋特殊名單櫃＋金飾櫃＋貴賓櫃，出入口分流。</li><li>12/20 前：印製各類「領訖」核銷貼紙或戳章、名單紙本備援（防系統斷線）、桌牌與類別指示牌。</li><li>12/24：結緣品全數運抵現場入庫上鎖，分線預先分裝，金飾另存保險箱。</li><li>12/25：全組現場走位演練一次，模擬功德主、貴賓、兒童、一般出席者四種領取情境。</li></ul></details>
     <details><summary>當日時序（7）</summary><ul><li><span class="tm">12/26 06:00</span>開箱盤點五類品項數量，核對名單版本為最新（含前晚手動改派結果），金飾雙人點交。</li><li><span class="tm">12/26 07:30</span>各發放線就位，與福田服務台確認兩區指示牌互不混淆，引導人員站定分流點。</li><li><span class="tm">12/26 儀式進行中</span>依動線「拿供花→拿鏟→領一筒金」節奏，每梯 108 位鏟土完畢後湧入時段加開發放線。</li><li><span class="tm">12/26 全程每小時</span>庫存回報一次，任一品項低於三成即後倉補貨；名單核銷即時註記防重領。</li><li><span class="tm">12/26 貴賓離場前</span>知客引導貴賓至專櫃領一筒金＋大存錢筒，金鏟子金項鍊當面簽領。</li><li><span class="tm">12/26 14:30 起</span>散場尖峰全線發放巧克力存錢筒，未領名單清點、通知補領。</li><li><span class="tm">12/26 16:00</span>結算：各品項發出數對名單核銷數，金飾餘量雙人點交回庫，剩餘品項封箱回運。</li></ul></details>
@@ -417,6 +452,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>衛生清潔</b><div class="duty">備洗手處與擦手紙、清理灑落金料、器具定時消毒。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>機動支援</b><div class="duty">支援尖峰時段、遞補休息人力、處理長者與兒童的協助裝填。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（3 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 5 條　一筒金要有大池</div><blockquote>一筒金：自己去裝，要有大池</blockquote><ul><li>功德主自己動手裝，不是由人發放</li><li>要設大池（裝金池）</li><li>池深與取用高度要考量長者彎腰</li></ul></div><div class="ri"><div class="rn">第 8 條　動線三站</div><blockquote>動線： 拿供花，拿鏟，領一筒金</blockquote><ul><li>第一站拿供花</li><li>第二站拿鏟</li><li>第三站領一筒金</li><li>全線分段站崗引導，含集結區、緩衝區、離場動線</li></ul></div><div class="ri"><div class="rn">第 15 條　結緣品類別要顯示在名單上</div><blockquote>結緣品類別要顯示在名單上：一筒金是功德主，貴賓等特殊名單才有，巧克力存錢筒是出席的人都有，圓滿50萬以上人有一條999約金的金鏟子金項鍊；兒童有兒童版的一筒金；貴賓是一筒金加大存錢筒</blockquote><ul><li>★ 結緣品類別要顯示在名單上</li><li>一筒金：功德主、貴賓等特殊名單才有</li><li>巧克力存錢筒：出席的人都有</li><li>圓滿 50 萬以上：一條 999 金的金鏟子金項鍊</li><li>兒童：兒童版的一筒金</li><li>貴賓：一筒金 ＋ 大存錢筒</li><li>★ 一筒金目前被兩組重複備貨，需定案由哪一組發（見待寺方裁決）</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（7）</summary><ul><li>11/30 前：定案裝金池規格（建議至少 2 座大池分流、池深及取用高度考量長者彎腰），發包製作或租借。</li><li>11/30 前：與主辦確認金料材質、總量與每人份量上限，估算 1080 位功德主＋貴賓＋兒童版的總需求並加 15% 備量。</li><li>12/05 前：與結緣品組書面確認界面：一筒金僅特殊名單；巧克力存錢筒人人有（結緣品組發）；50 萬以上金鏟子金項鍊與貴賓大存錢筒歸結緣品組，一筒金組僅負責筒金本體，避免重工或漏發。</li><li>12/10 前：向名單系統確認資格名單可依動土編號查詢，並支援現場手動改派後自動更新。</li><li>12/15 前：完成區域配置圖：入口核對→取筒→裝金池→出口，與場地組確認地面平整、遮雨棚、夜間封存方式。</li><li>12/20 前：全組演練一次 108 人梯次通過的節奏（目標每梯 15 分鐘內清空）。</li><li>12/25 晚：金料與筒身運抵現場清點入庫，安排夜間看守或上鎖封存。</li></ul></details>
     <details><summary>當日時序（7）</summary><ul><li><span class="tm">12/26 06:30</span>開池布置：金料入池、筒身分類上架（成人版／兒童版）、名單設備開機。</li><li><span class="tm">12/26 08:00</span>全區演走一次，與鏟土區確認每梯放行暗號與對講頻道。</li><li><span class="tm">12/26 典禮開始後</span>依「拿供花→拿鏟→領一筒金」動線，每梯 108 位鏟土完成即接手引導入區。</li><li><span class="tm">12/26 每梯之間</span>補金、整池、清潔地面，核對該梯發出數量與名單勾銷數是否相符。</li><li><span class="tm">12/26 第 5 梯後</span>盤點剩餘金料，若消耗超前即調整每人份量提示或啟用備量。</li><li><span class="tm">12/26 全梯結束</span>處理補領與爭議案件（憑名單核實），剩料清點封存，回報總發放數。</li><li><span class="tm">12/26 散場後</span>拆池、場地復原、器材清點裝箱。</li></ul></details>
@@ -443,6 +479,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>環保回收站</b><div class="duty">六個垃圾分類站（一般、回收、廚餘）定點值守，指導分類並定時清運集中。</div></td><td class="num">0<span class="of">/14</span><span class="short">缺 14</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>雨備機動</b><div class="duty">帳篷、雨布、防滑墊、排水路巡查；啟動雨備方案時負責加蓋與動線改道。</div></td><td class="num">0<span class="of">/4</span><span class="short">缺 4</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（4 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 6 條　除草開闢停車場</div><blockquote>要有除草把停車場弄出來</blockquote><ul><li>除草整地，把停車場開闢出來</li><li>與威毅、竹間確認整地進度</li><li>救護車動線要畫進停車場規劃並全日淨空</li></ul></div><div class="ri"><div class="rn">第 7 條　佛龕用 LED</div><blockquote>佛龕用led</blockquote><ul><li>佛龕採 LED 燈組</li><li>電源與線路（戶外防風防雨）</li><li>點燈時機屬儀軌節點，燈控人員聽組長口令</li></ul></div><div class="ri"><div class="rn">第 21 條　環保垃圾</div><blockquote>環保垃圾</blockquote><ul><li>垃圾分類回收站與動線</li><li>2500 人規模的清運排班</li><li>典後場地復原</li></ul></div><div class="ri"><div class="rn">第 22 條　流動廁所</div><blockquote>流動廁所</blockquote><ul><li>依 2500 人規模估算座數</li><li>清潔與補給排班</li><li>位置要離餐飲區有距離、離席區不能太遠</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（9）</summary><ul><li>11/15 前：完成除草整地發包，會同威毅營造勘查停車場地質與排水（雨後泥濘風險）。</li><li>11/30 前：停車場整地完工，畫設遊覽車約 50 格、小客車約 200 格、貴賓區與救護車位，立指示牌。</li><li>12/05 前：確認發電機容量（音響、LED、服務台用電總表），下訂主機＋備援機各一。</li><li>12/10 前：流動廁所 30 座（含無障礙 3 座）簽約，約定 12/24 進場、當日中午加抽一次、12/27 撤場。</li><li>12/10 前：佛龕 LED 設計定稿並試裝一次，拍照給總住持與宗務長確認。</li><li>12/15 前：垃圾分類站六站位置定點（入口、齋堂區、鏟土區外圍、一筒金區、流通區、停車場），與台東環保清運業者約定清運時段。</li><li>12/20 前：雨備方案定案——主要儀式區帳篷數量、泥地鋪板範圍、雨衣 3000 件到貨。</li><li>12/24：全組進場，電力全線通電測試、廁所定位、垃圾桶與分類牌就位。</li><li>12/25 綵排時：LED 夜間點燈驗收、音響電力滿載測試、停車動線實走一遍。</li></ul></details>
     <details><summary>當日時序（8）</summary><ul><li><span class="tm">12/25 14:00</span>火車抵達前完成停車場與接駁下車點布置，晚間綵排供電與 LED 點燈值守。</li><li><span class="tm">12/26 05:30</span>全組集合點名，發電機啟動、全區供電與 LED 最終檢查，廁所開鎖巡檢一輪。</li><li><span class="tm">12/26 06:30</span>停車引導就位，開放遊覽車與自小客進場，貴賓區專人管制。</li><li><span class="tm">12/26 08:00-14:00</span>廁所每小時巡檢一次補紙補水；垃圾站定點值守、每兩小時清運集中一次。</li><li><span class="tm">12/26 11:30</span>流動廁所業者到場加抽一次（用餐尖峰前）。</li><li><span class="tm">12/26 大典全程</span>工務值星持無線電機動待命，雨備小組盯天氣、預備啟動帳篷加蓋。</li><li><span class="tm">12/26 15:00 起</span>散場停車引導疏運，垃圾總清運、資源回收過磅，發電機關機盤點。</li><li><span class="tm">12/27</span>廁所與帳篷撤場點交，場地復原巡檢，垃圾清運完結並回報組長。</li></ul></details>
@@ -466,6 +503,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>錄影</b><div class="duty">多機位錄影：主機位、遊機、空拍（需事先確認空域申請），全程收音含鐘鼓與楞嚴咒。</div></td><td class="num">0<span class="of">/3</span><span class="short">缺 3</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>直播技術</b><div class="duty">架設直播訊號與導播切換，備妥行動網路上行備援，直播全程監看畫面與留言。</div></td><td class="num">0<span class="of">/2</span><span class="short">缺 2</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（2 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 1 條　邀請卡</div><blockquote>邀請卡</blockquote><ul><li>設計、印製、寄送</li><li>卡上印動土編號與報到口指引</li><li>現場憑卡查驗</li></ul></div><div class="ri"><div class="rn">第 19 條　紀念主題字與 logo</div><blockquote>千手護手，千眼照見，萬眾一心，千鏟立基，寶嚴禪寺開山動土紀念 丙午年冬月18日＋ 寶嚴logo</blockquote><ul><li>主題字：千手護手，千眼照見，萬眾一心，千鏟立基</li><li>落款：寶嚴禪寺開山動土紀念　丙午年冬月18日</li><li>加寶嚴 logo</li><li>應用於背板、鏟具緞帶、紀念品、邀請卡</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（7）</summary><ul><li>10/31 前：主視覺與邀請卡設計定稿送總住持核可（主題字、紀念日期字樣、logo 位置）</li><li>11/15 前：邀請卡印製完成（依 1080 位功德主加貴賓與備量，建議印 1500 份）</li><li>11/30 前：邀請卡寄送完畢，附交通、住宿、火車集合資訊；回函統計交名單資訊組</li><li>12/10 前：舞台背板、指標系統、鏟具緞帶（10 梯 × 108 支加備品約 1200 條）、紀念品完成打樣定稿</li><li>12/15 前：直播平台、空拍空域申請、現場網路上行頻寬確認；都蘭現場實地測試訊號</li><li>12/20 前：所有輸出物到貨驗收；背板於場佈日進場張掛</li><li>12/24 前：攝錄影機位圖、直播流程表與典禮儀軌對稿完成</li></ul></details>
     <details><summary>當日時序（6）</summary><ul><li><span class="tm">12/25 15:00</span>隨團抵台東後赴現場：背板定位複查、機位架設、直播訊號測試</li><li><span class="tm">12/25 晚間</span>晚宴與綵排全程攝錄；直播團隊利用綵排走一次完整導播流程</li><li><span class="tm">12/26 06:30</span>全機位就位、空拍起飛檢查、直播開機待命</li><li><span class="tm">12/26 典禮開始</span>直播開播；楞嚴神鼓開場、灑淨繞場、獻花供、10 梯鏟土、一筒金、大蒙山與三皈依全程攝錄</li><li><span class="tm">12/26 每梯鏟土</span>每梯 108 位定點大合照一張，對照動土編號存檔</li><li><span class="tm">12/26 圓滿後</span>直播收播、素材備份雙份、器材清點撤收</li></ul></details>
@@ -489,6 +527,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(143,214,166
 <tr class="none"><td class="rt"><b>現場查詢台</b><div class="duty">設 3 個查詢點，各 2 人，供功德主查自己的動土編號、梯次與結緣品類別；佩掛醒目識別。</div></td><td class="num">0<span class="of">/6</span><span class="short">缺 6</span></td><td class="who"><span class="blank">未填</span></td></tr>
 <tr class="none"><td class="rt"><b>梯次調度員</b><div class="duty">駐鏟土集結區，處理現場臨時換梯、缺席遞補，在系統改派後確認後續梯次自動調整無誤，並通知司儀。</div></td><td class="num">0<span class="of">/3</span><span class="short">缺 3</span></td><td class="who"><span class="blank">未填</span></td></tr></tbody></table>
   
+  <details class="reqd" open><summary>本組負責的主辦交代事項（4 條・原文）</summary><div class="rl"><div class="ri"><div class="rn">第 11 條　改名為動土編號</div><blockquote>鏟土順序改名為動土編號</blockquote><ul><li>★「鏟土順序」一律改稱「動土編號」</li><li>名單、唱名、卡片、後台用字全部統一</li></ul></div><div class="ri"><div class="rn">第 12 條　動土編號的編法</div><blockquote>動土編號以委員及功德項目為編號，例如開山1，開山2， 袈裟1</blockquote><ul><li>以委員級別及功德項目編號</li><li>例：開山1、開山2、袈裟1</li><li>全數約 1080 位編入 10 梯</li></ul></div><div class="ri"><div class="rn">第 13 條　手動改分派後自動接續</div><blockquote>各項分配要有讓工作人員手動更改分派的功能，若工作人員手動更改後，你要自動接續依著調整分派內容</blockquote><ul><li>工作人員可手動更改分派</li><li>★ 改完之後系統要自動接續調整其餘分派內容</li><li>現場即時列印異動名單</li><li>★ 此功能在後台仍未接上介面（見待寺方裁決）</li></ul></div><div class="ri"><div class="rn">第 14 條　執事名單用 2026 版且可改</div><blockquote>執事名單要用2026名單，要有讓工作人員手動更改執事名稱的功能</blockquote><ul><li>★ 一律用 2026 執事名單</li><li>工作人員可手動更改執事名稱</li><li>★ 總清單「2026 護法會職稱」欄有 225 位空白，需寺方補齊</li></ul></div></div></details>
   <div class="acc">
     <details><summary>大典前準備（7）</summary><ul><li>11/10 前：與常住確認委員及功德項目編號規則與排序倫理（開山、袈裟等項目先後、同項目內順序）</li><li>11/20 前：1080 位功德主名單初版完成，套入動土編號，產出 10 梯 × 108 位梯次表初稿；貴賓梯次依身份及團體另排，不受 108 一排限制</li><li>11/30 前：分派系統上線測試：手動改派後自動接續調整、執事名稱可改、異動留紀錄；請三位非資訊背景執事實測</li><li>12/10 前：名單上加註結緣品類別欄位（一筒金／巧克力存錢筒／金鏟子金項鍊／兒童版一筒金／貴賓組合），與結緣品發放單位核對數量</li><li>12/15 前：司儀唱名稿初版完成，芳名讀音疑義逐一查證；名單同步供文宣組寄邀請卡、供福田服務台現場對照</li><li>12/20 前：名單凍結定版；之後異動只走系統改派流程並留紀錄</li><li>12/24 前：離線備援：全套名單、梯次表、唱名稿印紙本三份，分持於組長、司儀台、查詢台</li></ul></details>
     <details><summary>當日時序（6）</summary><ul><li><span class="tm">12/25 晚間綵排</span>帶名單與系統進綵排：驗證唱名稿讀音、走一次改派→自動接續調整→司儀稿更新的全流程</li><li><span class="tm">12/26 06:30</span>查詢台開台：系統連線、紙本備援、識別佩掛就位</li><li><span class="tm">12/26 報到時段</span>支援報到核對：功德主查動土編號與梯次，缺席者即時在系統除名，後續遞補自動調整</li><li><span class="tm">12/26 每梯鏟土前 15 分鐘</span>梯次調度員按動土編號集結該梯 108 位，異動即改系統，確認後通知司儀最新唱名稿</li><li><span class="tm">12/26 全日</span>受理各組執事名稱臨時更改，同步更新系統與司儀資料</li><li><span class="tm">12/26 圓滿後</span>匯出最終版名單與異動紀錄，交常住存檔並提供功德芳名錄後續使用</li></ul></details>
