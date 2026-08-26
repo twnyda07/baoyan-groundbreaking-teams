@@ -56,6 +56,16 @@ h1{font-size:1.75rem;color:var(--white);letter-spacing:.1em;font-weight:700}
 .navlink.bk{background:rgba(46,125,79,.14);border-color:rgba(46,125,79,.5);color:var(--goldb)}
 .navlink.bk:hover{background:var(--gold);color:#fff}
 .navlink.sch{background:rgba(46,125,79,.16);border-color:rgba(46,125,79,.55);color:var(--goldb);font-weight:700}
+.signup{display:inline-flex;align-items:baseline;gap:12px;margin-top:20px;
+  background:linear-gradient(135deg,#2E7D4F,#1F6B40);color:#fff;text-decoration:none;
+  padding:14px 30px;border-radius:12px;font-size:1.22rem;font-weight:700;letter-spacing:.06em;
+  box-shadow:0 3px 14px rgba(31,107,64,.32)}
+.signup span{font-size:.86rem;font-weight:400;letter-spacing:.02em;opacity:.92}
+.signup:hover{background:linear-gradient(135deg,#358f5a,#25794a);color:#fff}
+.navlink.su{background:#2E7D4F;border-color:#2E7D4F;color:#fff;font-weight:700}
+.navlink.su:hover{background:#25794a;color:#fff}
+@media(max-width:620px){.signup{width:100%;flex-direction:column;gap:3px;padding:14px 18px;text-align:center}}
+
 .navlink.sch:hover{background:var(--gold);color:#fff}
 
 /* 組織圖 */
@@ -191,6 +201,8 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.
     <div class="stat"><span>志工報名表尚未接上</span></div>
   </div>
   <div class="tbar"><div class="track"><i class="mid" style="width:1%"></i></div></div>
+  <a class="signup" href="https://docs.google.com/forms/d/1COtmMYNYOPaVJbfNTQcMAYzTae8IFLNXjAsI5cq_n6M/viewform" target="_blank" rel="noopener">
+    我要報名志工　<span>加入動土大典義工行列，任選想服務的組別</span></a>
 </div></header>
 
 <div class="tools"><div class="wrap">
@@ -198,6 +210,7 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.
   <button id="bshort" aria-pressed="false">只看有缺額</button>
   <button id="bopen" aria-pressed="false">全部展開</button>
   <button onclick="doPrint()">列印</button>
+  <a class="navlink su" href="https://docs.google.com/forms/d/1COtmMYNYOPaVJbfNTQcMAYzTae8IFLNXjAsI5cq_n6M/viewform" target="_blank" rel="noopener">我要報名志工</a>
   <a class="navlink sch" href="schedule.html">大典行程</a>
   <a class="navlink" href="decisions.html">待寺方裁決</a>
   <a class="navlink bk" href="https://script.google.com/macros/s/AKfycbxHKA1fQqrJ21DoV3uZW--y7djbuZS1LZSxkJS1bmxIv4KKYRzwb6sP1wSramlOceYx/exec" target="_blank" rel="noopener">工作人員後台</a>
