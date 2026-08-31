@@ -183,7 +183,12 @@ footer{margin-top:46px;padding:26px 0 40px;border-top:1px solid rgba(46,125,79,.
 @media print{
   body{background:#fff;color:#111}
   .tools,footer{display:none} .card{border-color:#bbb;background:#fff;break-inside:avoid}
-  details{break-inside:avoid} details:not([open]) ul{display:none}
+  /* 列印＝離線紙本，現場最需要的就是各組的當日時序與器材清單。
+     先前 details:not([open]) ul{display:none} 會讓收合的區塊整段印不出來，
+     紙本只剩職務與人名骨架。列印時一律展開。 */
+  details{break-inside:avoid}
+  details, details>ul, details>ol, details>div, details>table{display:block!important}
+  details>summary{font-weight:700;list-style:none}
   h1,.ch h3,.dh{color:#111} .mission,.duty,.sub{color:#444}
 }
 </style>
