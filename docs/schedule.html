@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>寶嚴禪寺開山動土大典｜大典行程</title>
+<style>
+  :root{--bg:#F7F9F5;--ink:#1f3d2b;--line:#cfdcd2;--accent:#2f6b47}
+  *{box-sizing:border-box}
+  html{font-size:19px}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       background:var(--bg);color:var(--ink);padding:24px;
+       font-family:"PingFang TC","Noto Sans TC","Helvetica Neue",sans-serif;line-height:1.8}
+  .box{width:100%;max-width:26rem;text-align:center}
+  h1{font-size:1.35rem;margin:0 0 .3rem;letter-spacing:.04em}
+  .sub{font-size:.95rem;opacity:.75;margin:0 0 1.6rem}
+  form{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+  input{flex:1 1 12rem;min-width:0;font-size:1.05rem;padding:.7rem .9rem;
+        border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+  input:focus{outline:none;border-color:var(--accent)}
+  button{font-size:1.05rem;padding:.7rem 1.6rem;border:0;border-radius:10px;
+         background:var(--accent);color:#fff;cursor:pointer}
+  button:disabled{opacity:.55;cursor:default}
+  .msg{min-height:1.6rem;margin-top:.9rem;font-size:.95rem}
+  .msg.err{color:#a3341f}
+  .foot{margin-top:2rem;font-size:.82rem;opacity:.7;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>寶嚴禪寺開山動土大典</h1>
+  <p class="sub">大典行程　·　內部工作文件</p>
+  <form id="f">
+    <input id="pw" type="password" inputmode="text" placeholder="請輸入通行碼"
+           autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false">
+    <button type="submit" id="b">進入</button>
+  </form>
+  <div class="msg" id="m"></div>
+  <div class="foot">本頁內容為加密儲存，沒有通行碼無法讀取。<br>
+    通行碼請向承辦單位索取，請勿轉發通行碼或頁面內容。</div>
+</div>
+<script src="payload.js?v=71941d48"></script>
+<script>
+(function(){
+  var VIEW='schedule.html', KEY='baoyan_teams_pw';
+  var f=document.getElementById('f'), pw=document.getElementById('pw'),
+      b=document.getElementById('b'), m=document.getElementById('m');
+  function say(t,c){ m.textContent=t||''; m.className='msg'+(c?' '+c:''); }
+  function bytes(s){ var x=atob(s), a=new Uint8Array(x.length);
+    for(var i=0;i<x.length;i++) a[i]=x.charCodeAt(i); return a; }
+
+  async function open_(password){
+    var E=window.ENC[VIEW], enc=new TextEncoder();
+    var km=await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    var key=await crypto.subtle.deriveKey(
+      {name:'PBKDF2', salt:bytes(E.s), iterations:E.it, hash:'SHA-256'},
+      km, {name:'AES-GCM', length:256}, false, ['decrypt']);
+    var pt=await crypto.subtle.decrypt({name:'AES-GCM', iv:bytes(E.iv)}, key, bytes(E.ct));
+    return new TextDecoder().decode(pt);
+  }
+
+  async function tryPass(password, silent){
+    if(!password) return;
+    b.disabled=true; say('解密中，請稍候…');
+    try{
+      var page=await open_(password);
+      /* 同一個分頁裡換頁不必再問一次；關掉分頁就要重新輸入 */
+      try{ sessionStorage.setItem(KEY,password); }catch(e){}
+      document.open(); document.write(page); document.close();
+    }catch(e){
+      b.disabled=false;
+      if(e && e.name==='OperationError'){
+        try{ sessionStorage.removeItem(KEY); }catch(_){}
+        say(silent?'':'通行碼不正確。', 'err'); pw.value=''; pw.focus();
+      }else{
+        say('載入失敗，請重新整理頁面再試。','err');
+      }
+    }
+  }
+
+  if(!(window.crypto && crypto.subtle)){
+    say('這個瀏覽器不支援解密，請改用 Safari 或 Chrome，並確認網址開頭是 https。','err');
+    b.disabled=true; return;
+  }
+  f.addEventListener('submit', function(e){ e.preventDefault(); tryPass(pw.value.trim(), false); });
+  var saved=null; try{ saved=sessionStorage.getItem(KEY); }catch(e){}
+  if(saved){ tryPass(saved, true); } else { pw.focus(); }
+})();
+</script>
+</body>
+</html>
